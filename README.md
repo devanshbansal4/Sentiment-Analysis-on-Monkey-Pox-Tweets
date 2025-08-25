@@ -5,3 +5,7 @@ TraditionalModels.ipynb contains the code to train Logistic Regression, Naive Ba
 AdvancedEnsebleHardVoting.ipynb and AdvancedEnsebleSoftVoting.ipynb contain the codes that utilizes multiple of these models to predict the sentiment using hard voting and soft voting respectivelty.
 
 MonkeyPoxDataset.csv is the dataset file.
+
+cnn_model.h5 is the trained cnn model.
+
+bilstm_atention_model.h5 contains the trained model for the bilstm.
