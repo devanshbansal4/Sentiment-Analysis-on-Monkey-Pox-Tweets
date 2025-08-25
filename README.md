@@ -9,3 +9,12 @@ MonkeyPoxDataset.csv is the dataset file.
 cnn_model.h5 is the trained cnn model.
 
 bilstm_atention_model.h5 contains the trained model for the bilstm.
+
+
+log_reg.pkl contains the trained logistic regression model. 
+nb.pkl contains the trained naive bayes model.
+vectorizer.pkl contains the count vecorizer tokens.
+xgb.pkl contains the xgboost trained model.
+
+the trained model file for rf.pkl has not been uploaded because it was too big for git.
+
