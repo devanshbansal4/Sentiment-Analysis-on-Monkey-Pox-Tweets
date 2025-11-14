@@ -1,33 +1,69 @@
-Notebooks for Model Training::
-
-  Bi_LSTM.ipynb – Code for training a BiLSTM model.  
-  CNN.ipynb – Code for training a CNN model.
-  DistilBert.ipynb – Code for training a DistilBERT model.
-  TraditionalModels.ipynb – Code to train Logistic Regression, Naive Bayes, Random Forest, and XGBoost individually. At the end, this notebook also creates an ensemble of these four models for sentiment prediction.
-  AdvancedEnsebleHardVoting.ipynb – Ensemble model using hard voting.
-  AdvancedEnsebleSoftVoting.ipynb – Ensemble model using soft voting.
+Sentiment Analysis Models and Ensembles
 
 
-
-Dataset::
-  
-  MonkeyPoxDataset.csv – Dataset file used for training and evaluation.
+This repository contains multiple deep learning and traditional machine learning approaches for sentiment analysis, along with ensemble methods designed for improved prediction performance. All models are trained on the "Monkeypox Dataset.csv" dataset.
 
 
+## Repository Structure
+.
+├── Bi_LSTM.ipynb
+├── CNN.ipynb
+├── DistilBert.ipynb
+├── TraditionalModels.ipynb
+├── AdvancedEnsembleHardVoting.ipynb
+├── AdvancedEnsembleSoftVoting.ipynb
+├── Monkeypox Dataset.csv
+├── cnn_model.h5
+├── bilstm_attention_model.h5
+├── log_reg.pkl
+├── nb.pkl
+├── xgb.pkl
+├── vectorizer.pkl
+├── config.json
+├── tokenizer_config.json
+├── special_tokens_map.json
+├── vocab.txt
+└── README.md
 
-Trained Models::
 
-  cnn_model.h5 – Trained CNN model.
-  bilstm_atention_model.h5 – Trained BiLSTM model with attention.
-  log_reg.pkl – Trained Logistic Regression model.
-  nb.pkl – Trained Naive Bayes model.
-  xgb.pkl – Trained XGBoost model.
-  vectorizer.pkl – Count Vectorizer tokens.
-  Note: The trained Random Forest model file (rf.pkl) could not be uploaded because it was too large for Git.
+## Notebooks for Model Training ##
+## Deep Learning Models
+Bi_LSTM.ipynb – Training pipeline for a Bidirectional LSTM model.
+CNN.ipynb – Convolutional Neural Network for text classification.
+DistilBert.ipynb – Fine-tuning DistilBERT for sentiment prediction.
+## Traditional Machine Learning Models
+TraditionalModels.ipynb – Trains Logistic Regression, Naive Bayes, Random Forest, and XGBoost models.
+Includes an ensemble of all four models for combined predictions.
+## Ensemble Approaches
+AdvancedEnsembleHardVoting.ipynb – Hard voting ensemble across multiple trained models.
+AdvancedEnsembleSoftVoting.ipynb – Soft voting ensemble using probability averaging.
 
 
+## Dataset
+Monkeypox Dataset.csv – Dataset used for training, validation, and evaluation.
 
-DistilBERT Files
-  
-  config.json, special_tokens_map, tokenizer_config, vocab – Files required for the DistilBERT model.
-  Note: The trained DistilBERT model file (tf_model.h5) could not be uploaded because it was too large for Git.
+
+## Trained Model Files ##
+## Deep Learning
+cnn_model.h5 – Trained CNN model.
+bilstm_attention_model.h5 – Trained BiLSTM model with attention.
+## Traditional ML
+log_reg.pkl – Logistic Regression model.
+nb.pkl – Naive Bayes model.
+xgb.pkl – XGBoost model.
+vectorizer.pkl – CountVectorizer for preprocessing text.
+Note: Random Forest model (rf.pkl) is excluded due to file size limits.
+
+
+## DistilBERT Configuration Files ## 
+## Required files for tokenization and model setup:
+config.json
+tokenizer_config.json
+special_tokens_map.json
+vocab.txt
+Note: The trained DistilBERT model weights (tf_model.h5) are not included due to size restrictions.
+
+
+## Notes
+All models can be loaded directly for inference using the provided checkpoints.
+Ensemble notebooks demonstrate comparative performance and combined voting strategies.
